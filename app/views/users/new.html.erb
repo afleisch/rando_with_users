@@ -1,25 +1,21 @@
-<h1>Register!</h1>
+<h1 class="container">Register!</h1>
 
 
 <%= form_for @user do |f| %>
-  <div>
+  <div class="container">
   	<%= f.label :email %><br>
   	<%= f.text_field :email %>
   </div>
-  <div>
+  <div class="container">
   	<%= f.label :password %><br>
   	<%= f.password_field :password %>
   </div>
-
- 
- <div>
+  <div class="container">
   	<%= f.label :password_confirmation %><br>
   	<%= f.password_field :password_confirmation %>
   </div>
 
-
-
-
-  </div>
+  <div class="container">
   <%= f.submit %>
+  </div>
   <% end %>
