@@ -1,0 +1,14 @@
+<div class="container">
+ <h2>The random url for <%="#{@random_url}"%> is:</h2>
+
+ <h3> <%= link_to "localhost:3000/urls/go/#{@random_string}", @random_url %></h3>
+
+
+
+  <img src="http://api.webthumbnail.org?width=400&height=300&screen=1280&format=png&url=<%= @random_url %>" alt="no_preview.png"/><br>
+
+
+<%= render partial: "form_return" %>
+
+</div>
+

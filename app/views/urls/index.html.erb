@@ -1,0 +1,36 @@
+ <div class="container">
+  <h1> RANDO </h1>
+
+
+
+  <table class="table table-bordered"> 
+ 	 <tr>
+      <th>ID</th>
+      <th>Link</th>
+      <th>Random String</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Preview</th>
+      <th>Delete</th>
+   </tr>
+
+  <% @urls.each do |url| %>
+      <tr>
+        <td><%= url[:id] %></td>
+        <td><%= url[:link] %></td>
+        <td><%= url[:random_string] %></td>
+        <td><%=url[:created_at] %></td>
+        <td><%=url[:updated_at] %></td>
+        <td><%= button_to "Preview", {controller: :urls, action: :preview, id: url[:id]}, :method => :get %></td>
+        <td><%= button_to "Delete", {controller: :urls, action: :delete, id: url[:id]}, :method => :post %></td> 
+      </tr>
+  <% end %>
+
+  </table>
+
+  <%= button_to "Create a new random url", action: "new" %>
+
+</div>
+
+
+ 
