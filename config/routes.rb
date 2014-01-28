@@ -10,7 +10,7 @@ Rando::Application.routes.draw do
 
   get '/signup', to: 'users#new'
 
-  delete '/signout', to: 'sessions#destroy'
+  get '/signout', to: 'sessions#destroy'
 
   get '/signin', to: 'sessions#new'
   
