@@ -1,6 +1,19 @@
 Rando::Application.routes.draw do
+  get "sessions/new"
+  get "sessions/destroy"
+  get "users/new"
+  get "users/show"
+  get "users/create"
   root to: 'urls#index'
 
+  resources :users, :sessions
+
+  get '/signup', to: 'users#new'
+
+  delete '/signout', to: 'sessions#destroy'
+
+  get '/signin', to: 'sessions#new'
+  
   get '/urls', to: 'urls#index'
 
   get '/urls/new', to: 'urls#new'
